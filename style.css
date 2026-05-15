@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+
+
+
+body{
+    font-family:'Poppins', sans-serif;
+    background:#f5e7d3;
+    color:#2b1b14;
+}
+
+
+
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:20px;
+    font-family:'Playfair Display', serif;
+}
+
+
+
+
+
+/* NAVBAR A QUADRATI */
+.nav-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:12px;
+    padding:20px 40px;
+}
+
+.nav-grid a{
+    background:#c9a27e;
+    padding:20px;
+    text-align:center;
+    text-decoration:none;
+    color:#2b1b14;
+    font-weight:600;
+    border-radius:12px;
+    transition:0.3s;
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+.nav-grid a:hover{
+    transform:scale(1.05);
+    background:#b88f6b;
+}
+
+
+
+
+
+
+
+
+/* HERO */
+.hero{
+    height:70vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background:url('https://i.pinimg.com/1200x/ca/dc/c0/cadcc0ebbc3e43bfedec137bfd70d02d.jpg') center/cover;
+    position:relative;
+    color:white;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(40,20,10,0.6);
+}
+
+.hero div{
+    position:relative;
+    z-index:1;
+}
+
+.hero h2{
+    font-size:50px;
+    font-family:'Playfair Display', serif;
+}
+
+
+
+
+
+
+
+
+
+/* BLOCK */
+.block{
+    display:flex;
+    align-items:center;
+    gap:50px;
+    padding:120px 10%;
+}
+
+.block.reverse{
+    flex-direction:row-reverse;
+}
+
+.text{
+    flex:1;
+}
+
+.text h2{
+    font-family:'Playfair Display', serif;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.text p{
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* IMMAGINI */
+.block img{
+    flex:1;
+    height:320px;
+    border-radius:20px;
+    object-fit:cover;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+
+/* FULL SECTION */
+.full{
+    padding:120px 15%;
+    text-align:center;
+    background:#e7cfb1;
+}
+
+.full.alt{
+    background:#d9b88f;
+}
+
+.full h2{
+    font-family:'Playfair Display', serif;
+    font-size:34px;
+    margin-bottom:20px;
+}
+
+.full p{
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:#c9a27e;
+}
+
+
+
+
+
+
+
+
+.torna-su {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  background-color: #d9b88f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+}
+
+.torna-su:hover {
+  background-color:#d9b88fd9;
+  transform: scale(1.1);
+}
