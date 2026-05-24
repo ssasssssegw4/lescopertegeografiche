@@ -1,0 +1,295 @@
+/* RESET GENERALE */
+*{
+    margin:0; /* rimuove margini automatici */
+    padding:0; /* rimuove padding automatici */
+    box-sizing:border-box; /* include bordi e padding nella dimensione totale */
+    scroll-behavior:smooth; /* abilita scroll fluido */
+}
+
+
+
+
+/* BODY */
+body{
+    font-family:'Poppins', sans-serif; /* font principale */
+    background:#f5e7d3; /* colore sfondo */
+    color:#2b1b14; /* colore testo */
+}
+
+
+
+
+/* HEADER */
+header{
+    text-align:center; /* centra il contenuto */
+    padding:20px; /* spazio interno */
+    font-family:'Playfair Display', serif; /* font titolo */
+}
+
+
+
+
+
+/* NAVBAR */
+.nav-grid{
+    display:grid; /* attiva grid layout */
+    grid-template-columns:repeat(4, 1fr); /* crea 4 colonne */
+    gap:12px; /* spazio tra i box */
+    padding:20px 40px; /* spazio interno */
+}
+
+.nav-grid a{
+    background:#c9a27e; /* colore sfondo */
+    padding:20px; /* spazio interno */
+    text-align:center; /* centra testo */
+    text-decoration:none; /* rimuove sottolineatura */
+    color:#2b1b14; /* colore testo */
+    font-weight:600; /* rende testo più spesso */
+    border-radius:12px; /* arrotonda angoli */
+    transition:0.3s; /* animazione hover */
+    box-shadow:0 5px 12px rgba(0,0,0,0.2); /* ombra */
+}
+
+.nav-grid a:hover{
+    transform:scale(1.05); /* ingrandisce */
+    background:#b88f6b; /* cambia colore */
+}
+
+
+
+
+
+
+
+/* HERO */
+.hero{
+    height:70vh; /* altezza sezione */
+    display:flex; /* attiva flexbox */
+    align-items:center; /* centra verticalmente */
+    justify-content:center; /* centra orizzontalmente */
+    text-align:center; /* centra testo */
+    background:url('https://i.pinimg.com/1200x/ca/dc/c0/cadcc0ebbc3e43bfedec137bfd70d02d.jpg') center/cover; /* immagine sfondo */
+    position:relative; /* necessario per overlay */
+    color:white; /* colore testo */
+}
+
+.hero::after{
+    content:''; /* crea overlay */
+    position:absolute; /* posizione assoluta */
+    inset:0; /* occupa tutta area */
+    background:rgba(40,20,10,0.6); /* overlay scuro */
+}
+
+.hero div{
+    position:relative; /* mantiene contenuto sopra overlay */
+    z-index:1; /* porta davanti */
+}
+
+.hero h2{
+    font-size:50px; /* grandezza titolo */
+    font-family:'Playfair Display', serif; /* font elegante */
+}
+
+
+
+
+
+
+
+
+/* BLOCK */
+.block{
+    display:flex; /* flexbox */
+    align-items:center; /* allinea verticalmente */
+    gap:50px; /* spazio tra elementi */
+    padding:120px 10%; /* spazio interno */
+}
+
+.block.reverse{
+    flex-direction:row-reverse; /* inverte elementi */
+}
+
+.text{
+    flex:1; /* occupa spazio disponibile */
+}
+
+.text h2{
+    font-family:'Playfair Display', serif; /* font titolo */
+    font-size:32px; /* grandezza titolo */
+    margin-bottom:15px; /* spazio sotto */
+}
+
+.text p{
+    line-height:1.8; /* distanza righe */
+    font-size:16px; /* grandezza testo */
+}
+
+
+
+
+/* IMMAGINI */
+.block img{
+    flex:1; /* occupa spazio */
+    height:320px; /* altezza immagine */
+    border-radius:20px; /* arrotonda angoli */
+    object-fit:cover; /* adatta immagine */
+    box-shadow:0 10px 25px rgba(0,0,0,0.2); /* ombra */
+}
+
+
+
+
+
+
+
+
+/* FULL SECTION */
+.full{
+    padding:120px 15%; /* spazio interno */
+    text-align:center; /* centra testo */
+    background:#e7cfb1; /* colore sfondo */
+}
+
+.full.alt{
+    background:#d9b88f; /* sfondo alternativo */
+}
+
+.full h2{
+    font-family:'Playfair Display', serif; /* font titolo */
+    font-size:34px; /* grandezza titolo */
+    margin-bottom:20px; /* spazio sotto */
+}
+
+.full p{
+    line-height:1.8; /* distanza righe */
+    font-size:17px; /* grandezza testo */
+}
+
+
+
+
+/* FOOTER */
+footer{
+    text-align:center; /* centra testo */
+    padding:30px; /* spazio interno */
+    background:#c9a27e; /* colore sfondo */
+}
+
+
+
+
+
+
+
+
+/* BOTTONE TORNA SU */
+.torna-su {
+  position: fixed; /* posizione fissa */
+  bottom: 20px; /* distanza dal basso */
+  right: 20px; /* distanza da destra */
+  width: 55px; /* larghezza */
+  height: 55px; /* altezza */
+  background-color: #d9b88f; /* colore sfondo */
+  color: white; /* colore icona */
+  display: flex; /* flexbox */
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra orizzontalmente */
+  border-radius: 50%; /* forma cerchio */
+  font-size: 24px; /* grandezza freccia */
+  font-weight: bold; /* spessore freccia */
+  cursor: pointer; /* mano al passaggio */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25); /* ombra */
+  transition: all 0.3s ease; /* animazione */
+}
+
+.torna-su:hover {
+  background-color:#d9b88fd9; /* cambia colore */
+  transform: scale(1.1); /* ingrandisce */
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE TELEFONO */
+@media (max-width: 768px){
+
+    .nav-grid{
+        grid-template-columns:repeat(2, 1fr); /* 2 colonne */
+        padding:20px; /* riduce padding */
+    }
+
+    .nav-grid a{
+        padding:15px; /* riduce spazio interno */
+        font-size:14px; /* testo più piccolo */
+    }
+
+    .hero{
+        height:60vh; /* riduce altezza */
+        padding:20px; /* aggiunge spazio */
+    }
+
+    .hero h2{
+        font-size:36px; /* riduce titolo */
+    }
+
+    .hero p{
+        font-size:15px; /* riduce testo */
+    }
+
+    .block{
+        flex-direction:column; /* elementi verticali */
+        padding:70px 20px; /* riduce padding */
+        gap:30px; /* riduce spazio */
+    }
+
+    .block.reverse{
+        flex-direction:column; /* mantiene verticale */
+    }
+
+    .text h2{
+        font-size:28px; /* riduce titolo */
+        text-align:center; /* centra testo */
+    }
+
+    .text p{
+        font-size:15px; /* riduce testo */
+        line-height:1.7; /* migliora leggibilità */
+    }
+
+    .block img{
+        width:100%; /* tutta larghezza */
+        height:auto; /* altezza automatica */
+        max-height:350px; /* limite altezza */
+    }
+
+    .full{
+        padding:70px 20px; /* riduce padding */
+    }
+
+    .full h2{
+        font-size:28px; /* riduce titolo */
+    }
+
+    .full p{
+        font-size:15px; /* riduce testo */
+    }
+
+    ul{
+        padding-left:20px; /* spazio lista */
+        text-align:left; /* allinea testo */
+    }
+
+    footer{
+        padding:20px; /* riduce padding */
+    }
+
+    .torna-su{
+        width:50px; /* riduce grandezza */
+        height:50px; /* riduce grandezza */
+        font-size:20px; /* riduce icona */
+    }
+}
